@@ -1,0 +1,146 @@
+[
+  {
+    "name": "data_types",
+    "location": "src/cobol/data_types.md",
+    "description": "PIC clause, USAGE clause, COMP/COMP-3/COMP-1/COMP-2 formats, sign handling, storage size calculations, and numeric vs alphanumeric categories",
+    "key_words": ["PIC", "USAGE", "COMP-3", "PACKED-DECIMAL", "COMP-5", "SIGN SEPARATE", "overpunch", "storage size", "EBCDIC"]
+  },
+  {
+    "name": "file_handling",
+    "location": "src/cobol/file_handling.md",
+    "description": "File I/O verbs (OPEN, CLOSE, READ, WRITE, REWRITE, DELETE, START), SELECT/ASSIGN, FD entries, file status codes, BLOCK CONTAINS, and RECORDING MODE",
+    "key_words": ["SELECT ASSIGN", "FD", "OPEN I-O", "REWRITE", "BLOCK CONTAINS", "RECORDING MODE", "file status", "AT END", "INVALID KEY"]
+  },
+  {
+    "name": "copybooks",
+    "location": "src/cobol/copybooks.md",
+    "description": "COPY statement, REPLACING clause, pseudo-text, nested copybooks, DCLGEN includes, SYSLIB, and copybook library organization",
+    "key_words": ["COPY", "REPLACING", "pseudo-text", "SYSLIB", "DCLGEN", "EXEC SQL INCLUDE", "SUPPRESS", "copybook library"]
+  },
+  {
+    "name": "conditional_logic",
+    "location": "src/cobol/conditional_logic.md",
+    "description": "IF/ELSE/END-IF, EVALUATE/WHEN, 88-level condition names, relation/class/sign conditions, combined conditions with AND/OR/NOT, and abbreviated conditions",
+    "key_words": ["IF ELSE END-IF", "EVALUATE WHEN", "88-level", "condition name", "class condition", "NEXT SENTENCE", "EVALUATE TRUE", "abbreviated condition"]
+  },
+  {
+    "name": "string_handling",
+    "location": "src/cobol/string_handling.md",
+    "description": "STRING, UNSTRING, INSPECT (TALLYING/REPLACING/CONVERTING), reference modification, FUNCTION TRIM, and text parsing patterns",
+    "key_words": ["STRING", "UNSTRING", "INSPECT", "TALLYING", "CONVERTING", "reference modification", "DELIMITED BY", "WITH POINTER"]
+  },
+  {
+    "name": "arithmetic",
+    "location": "src/cobol/arithmetic.md",
+    "description": "ADD, SUBTRACT, MULTIPLY, DIVIDE, COMPUTE statements, GIVING, ROUNDED, ON SIZE ERROR, REMAINDER, CORRESPONDING, decimal alignment, and intermediate results",
+    "key_words": ["ADD", "SUBTRACT", "MULTIPLY", "DIVIDE", "COMPUTE", "ROUNDED", "ON SIZE ERROR", "REMAINDER", "GIVING"]
+  },
+  {
+    "name": "table_handling",
+    "location": "src/cobol/table_handling.md",
+    "description": "OCCURS clause, subscripts vs indexes, SEARCH and SEARCH ALL, INDEXED BY, OCCURS DEPENDING ON, multi-dimensional tables, and ASCENDING/DESCENDING KEY",
+    "key_words": ["OCCURS", "SEARCH ALL", "INDEXED BY", "OCCURS DEPENDING ON", "subscript", "binary search", "ASCENDING KEY", "SET index"]
+  },
+  {
+    "name": "paragraph_flow",
+    "location": "src/cobol/paragraph_flow.md",
+    "description": "PERFORM (inline, out-of-line, THRU, TIMES, UNTIL, VARYING), GO TO, fall-through, sections vs paragraphs, STOP RUN, GOBACK, and EXIT PARAGRAPH",
+    "key_words": ["PERFORM UNTIL", "PERFORM VARYING", "PERFORM THRU", "GO TO", "fall-through", "EXIT PARAGRAPH", "GOBACK", "WITH TEST AFTER"]
+  },
+  {
+    "name": "io_processing",
+    "location": "src/cobol/io_processing.md",
+    "description": "ACCEPT (FROM DATE/TIME/CONSOLE), DISPLAY, SORT statement with INPUT/OUTPUT PROCEDURE, MERGE, RELEASE, RETURN, and SORT-RETURN register",
+    "key_words": ["ACCEPT", "DISPLAY", "SORT", "MERGE", "RELEASE", "RETURN", "SORT-RETURN", "INPUT PROCEDURE", "OUTPUT PROCEDURE"]
+  },
+  {
+    "name": "error_handling",
+    "location": "src/cobol/error_handling.md",
+    "description": "FILE STATUS checking, DECLARATIVES/USE AFTER procedures, imperative error phrases (ON SIZE ERROR, ON OVERFLOW, ON EXCEPTION, AT END, INVALID KEY), and RETURN-CODE register",
+    "key_words": ["DECLARATIVES", "USE AFTER", "ON EXCEPTION", "ON OVERFLOW", "RETURN-CODE", "error recovery", "abend prevention", "inline error handling"]
+  },
+  {
+    "name": "jcl_interaction",
+    "location": "src/cobol/jcl_interaction.md",
+    "description": "DD statement mapping to COBOL files, PARM field, RETURN-CODE and COND parameter, SYSIN/SYSOUT, STEPLIB/JOBLIB, concatenated datasets, and GDG basics",
+    "key_words": ["DD statement", "PARM", "COND parameter", "SYSIN", "SYSOUT", "STEPLIB", "JOBLIB", "GDG", "EXEC PGM"]
+  },
+  {
+    "name": "vsam",
+    "location": "src/cobol/vsam.md",
+    "description": "VSAM dataset types (KSDS, ESDS, RRDS), control intervals/areas, alternate indexes, CI/CA splits, and VSAM-specific file status codes",
+    "key_words": ["VSAM", "KSDS", "ESDS", "RRDS", "control interval", "alternate index", "CI split", "CA split"]
+  },
+  {
+    "name": "db2_embedded_sql",
+    "location": "src/cobol/db2_embedded_sql.md",
+    "description": "Static embedded SQL in COBOL: EXEC SQL, host variables, SQLCA/SQLCODE, cursors (DECLARE/OPEN/FETCH/CLOSE), indicator variables, WHENEVER, COMMIT/ROLLBACK",
+    "key_words": ["EXEC SQL", "host variable", "SQLCA", "SQLCODE", "cursor", "FETCH", "indicator variable", "WHENEVER", "COMMIT ROLLBACK"]
+  },
+  {
+    "name": "db2_dynamic_sql",
+    "location": "src/cobol/db2_dynamic_sql.md",
+    "description": "Dynamic SQL in COBOL-DB2: EXECUTE IMMEDIATE, PREPARE/EXECUTE, SQLDA, parameter markers, cursor-based dynamic SQL, and dynamic WHERE clauses",
+    "key_words": ["EXECUTE IMMEDIATE", "PREPARE", "SQLDA", "parameter marker", "dynamic SQL", "dynamic WHERE", "DESCRIBE", "varying-list"]
+  },
+  {
+    "name": "cics",
+    "location": "src/cobol/cics.md",
+    "description": "CICS online transaction processing: EXEC CICS commands, pseudo-conversational model, BMS maps, COMMAREA, channels/containers, TSQ, TDQ, and CICS error handling",
+    "key_words": ["EXEC CICS", "pseudo-conversational", "BMS", "COMMAREA", "TSQ", "TDQ", "SEND MAP", "RECEIVE MAP", "EIB"]
+  },
+  {
+    "name": "batch_patterns",
+    "location": "src/cobol/batch_patterns.md",
+    "description": "Batch design patterns: sequential processing loop, control break logic, master-transaction matching, checkpoint/restart, report generation, and accumulator patterns",
+    "key_words": ["control break", "master-transaction", "checkpoint restart", "priming read", "accumulator", "match-merge", "end-of-file handling", "sequential processing"]
+  },
+  {
+    "name": "cobol_structure",
+    "location": "src/cobol/cobol_structure.md",
+    "description": "The four divisions (IDENTIFICATION, ENVIRONMENT, DATA, PROCEDURE), column layout (reference format), fixed vs free format, Area A vs Area B rules",
+    "key_words": ["IDENTIFICATION DIVISION", "ENVIRONMENT DIVISION", "DATA DIVISION", "PROCEDURE DIVISION", "Area A", "Area B", "reference format", "free format"]
+  },
+  {
+    "name": "working_storage",
+    "location": "src/cobol/working_storage.md",
+    "description": "WORKING-STORAGE SECTION: level numbers, VALUE clause, REDEFINES, RENAMES (66), FILLER, group vs elementary items, SYNC, JUSTIFIED RIGHT, BLANK WHEN ZERO",
+    "key_words": ["WORKING-STORAGE", "level number", "VALUE clause", "REDEFINES", "FILLER", "RENAMES", "level 66", "BLANK WHEN ZERO", "SYNC"]
+  },
+  {
+    "name": "subprograms",
+    "location": "src/cobol/subprograms.md",
+    "description": "CALL statement, LINKAGE SECTION, BY REFERENCE/BY CONTENT/BY VALUE, static vs dynamic calls, nested programs, CANCEL, and ENTRY statement",
+    "key_words": ["CALL", "LINKAGE SECTION", "BY REFERENCE", "BY CONTENT", "BY VALUE", "CANCEL", "nested program", "ENTRY statement"]
+  },
+  {
+    "name": "report_writer",
+    "location": "src/cobol/report_writer.md",
+    "description": "Report Writer module: RD entry, report groups (REPORT HEADING/FOOTING, PAGE HEADING/FOOTING, DETAIL, CONTROL), INITIATE, GENERATE, TERMINATE, SUM counters",
+    "key_words": ["RD", "INITIATE", "GENERATE", "TERMINATE", "report group", "PAGE LIMIT", "SUM counter", "GROUP INDICATE", "CONTROL clause"]
+  },
+  {
+    "name": "debugging",
+    "location": "src/cobol/debugging.md",
+    "description": "Diagnosing COBOL failures: abend codes (S0C7, S0C4, S0CB), DISPLAY debugging, READY TRACE, USE FOR DEBUGGING, SYSUDUMP, compiler diagnostics, and common runtime errors",
+    "key_words": ["abend", "S0C7", "S0C4", "SYSUDUMP", "READY TRACE", "USE FOR DEBUGGING", "compiler diagnostic", "dump reading"]
+  },
+  {
+    "name": "intrinsic_functions",
+    "location": "src/cobol/intrinsic_functions.md",
+    "description": "Comprehensive catalog of COBOL intrinsic functions: mathematical, string, date/time, numeric conversion, and ordinal functions invoked with FUNCTION keyword",
+    "key_words": ["FUNCTION", "CURRENT-DATE", "INTEGER-OF-DATE", "LENGTH", "REVERSE", "UPPER-CASE", "LOWER-CASE", "NUMVAL", "MAX MIN"]
+  },
+  {
+    "name": "data_movement",
+    "location": "src/cobol/data_movement.md",
+    "description": "MOVE statement rules, MOVE CORRESPONDING, INITIALIZE statement, SET statement, type conversion during moves, truncation/padding, de-editing, and justification rules",
+    "key_words": ["MOVE", "MOVE CORRESPONDING", "INITIALIZE", "truncation", "padding", "de-editing", "group move", "elementary move"]
+  },
+  {
+    "name": "date_handling",
+    "location": "src/cobol/date_handling.md",
+    "description": "Date processing: Gregorian/Julian formats, ACCEPT FROM DATE/DAY/TIME, FUNCTION CURRENT-DATE, date arithmetic with integer day numbers, century windowing, Y2K, leap year logic",
+    "key_words": ["Gregorian", "Julian", "ACCEPT FROM DATE", "INTEGER-OF-DATE", "DATE-OF-INTEGER", "century window", "Y2K", "leap year", "date validation"]
+  }
+]

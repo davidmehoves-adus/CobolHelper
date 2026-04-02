@@ -1,0 +1,8 @@
+[
+  {
+    "name": "micro_focus_cobol_9",
+    "location": "src/versions/micro_focus_cobol_9.md",
+    "description": "Micro Focus Visual COBOL (COBOL 9 engine) version-specific syntax, directives, runtime, and behavioral differences from standard COBOL and IBM Enterprise COBOL",
+    "key_words": ["Micro Focus", "Visual COBOL", "$SET", "COMP-5", "DIALECT", "COBCONFIG", "EXTFH", "LINE SEQUENTIAL", "ILGEN", "JVMGEN"]
+  }
+]

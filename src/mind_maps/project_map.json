@@ -1,0 +1,8 @@
+[
+  {
+    "name": "clearinghouse",
+    "location": "src/projects/clearinghouse.md",
+    "description": "Monthly batch enrollment reporting for Minnesota public colleges, transmitted to National Student Clearinghouse (NSC) for NSLDS federal compliance",
+    "key_words": ["FA0300CB", "FA0155CB", "NSC", "NSLDS", "enrollment report", "JAMS", "Oracle SQL", "RHEL"]
+  }
+]
