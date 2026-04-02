@@ -106,7 +106,7 @@ These skills use `context: fork` — they spawn isolated subagents for focused w
 
 ### Orchestration Rules
 
-1. **Protect the main context window.** The top-level agent must never read large files (COBOL source, lengthy docs) directly into its own context. Always delegate file reading and analysis to a forked skill. The main agent's job is to route, orchestrate, and combine results — not to do the heavy lifting itself. If a task involves reading or analyzing code, spawn the appropriate skill. No exceptions.
+1. **Protect the main context window.** The top-level agent must never perform large data processing tasks directly — reading large files, analyzing source code, generating lengthy output, or any work that would bloat the conversation context. Always delegate to a forked skill. The main agent's job is to route, orchestrate, and combine results — not to do the heavy lifting itself. If the main agent believes direct intervention is truly necessary, it must first ask the user for permission and explain why the task cannot be delegated and why the context window cost is justified.
 2. **Implicit routing only.** Match the user's intent to the right skill(s) — never ask the user to pick one.
 3. **Parallel when possible.** If a request triggers multiple skills (e.g., "explain this program and find any bugs" = business-analyst + code-specialist), spawn them in parallel.
 4. **Wait and combine.** When multiple skills are spawned, wait for all to return and deliver a single combined response — unless the documentor is one of them.
