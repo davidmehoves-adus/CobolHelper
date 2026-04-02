@@ -4,6 +4,16 @@ A cross-cutting companion for analyzing and understanding legacy COBOL code. Thi
 
 This repo does not contain runnable software. It contains knowledge, skills, and structured context that Claude uses to provide expert COBOL assistance through natural language conversation.
 
+## Requirements
+
+Python 3.12+ is required. Install dependencies with:
+
+```
+pip install -r requirements.txt
+```
+
+Dependencies are listed in `requirements.txt` at the repo root. The documentor skill also has a copy at `.claude/skills/documentor/scripts/requirements.txt`.
+
 ## Personality
 
 Read and follow `src/personality.md` at all times. These are non-negotiable rules governing tone, honesty, and communication style. No exceptions.
@@ -110,6 +120,17 @@ These skills use `context: fork` — they spawn isolated subagents for focused w
 2. **Implicit routing only.** Match the user's intent to the right skill(s) — never ask the user to pick one.
 3. **Parallel when possible.** If a request triggers multiple skills (e.g., "explain this program and find any bugs" = business-analyst + code-specialist), spawn them in parallel.
 4. **Wait and combine.** When multiple skills are spawned, wait for all to return and deliver a single combined response — unless the documentor is one of them.
-5. **Documentor exception.** If the documentor is spawned alongside other skills, deliver the chat response from the other skills immediately. Let the documentor run in the background and notify the user when docs are ready in `output/`.
+5. **Documentor exception.** If the documentor is spawned alongside other skills, deliver the chat response from the other skills immediately. The documentor runs in the background but requires a review cycle before finalizing (see rule 8).
 6. **Documentor reuses context.** When the documentor runs after other skills have already analyzed the code, it should build on their findings rather than re-analyzing from scratch.
 7. **Simple questions don't need forked skills.** If the user asks something Claude can answer directly from knowledge files or a quick code read, just answer — don't over-orchestrate. But if the answer requires reading COBOL source files, always fork.
+8. **Documentor review loop.** After the documentor returns its `.md` draft, the top-level agent must review it before the documentor generates `.docx`. The top-level agent reads the output file and checks it against these standards:
+   1. Opens with a clear **Problem Statement** that restates the questions or goals the document resolves
+   2. Sections map 1:1 to the questions/goals — no orphan sections
+   3. Answers are consistent with findings from other skills in the same request — no contradictions
+   4. Code references include paragraph names and line ranges
+   5. Terminology is defined on first use so non-technical readers can follow
+   6. Includes a summary/conclusion that directly answers each stated question
+   7. Formatted consistently (headers, tables, code blocks)
+   8. Document stands on its own — a reader shouldn't need the chat conversation to understand it
+
+   If the document fails any standard, send rework instructions back to the documentor via `SendMessage` with specific items to fix. Beyond the checklist, the top-level agent should also flag any clarity improvements it spots — awkward phrasing, missing transitions, vague explanations, or sections that could be restructured for better readability. The top-level agent has the best context for what the user actually asked and how the answer should read. Repeat until the document passes, then tell the documentor to proceed with `.docx` generation. If a `.docx` already exists (from a previous run or premature conversion), instruct the documentor to update both the `.md` and regenerate the `.docx`.

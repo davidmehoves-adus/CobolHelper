@@ -8,7 +8,7 @@ A monthly batch reporting process used by the 32 public colleges and universitie
 
 - **Operating System**: Red Hat Enterprise Linux 9
 - **Database**: Oracle SQL
-- **COBOL Version**: TBD (check Janke docs — may be mainframe-hosted)
+- **COBOL Version**: Micro Focus Visual COBOL (COBOL 9 engine)
 - **Scheduler**: JAMS — runs monthly, typically on the 15th
 
 ## Key Programs
@@ -29,7 +29,6 @@ The code was originally created a long time ago but is actively maintained. Upda
 ## Open Questions
 
 - Is this running on a mainframe? (check Janke docs)
-- What COBOL version/dialect is in use?
 - What is the full call chain beyond FA0300CB → FA0155CB?
 - What is the structure of the enrollment report output?
 - What database tables are involved?
