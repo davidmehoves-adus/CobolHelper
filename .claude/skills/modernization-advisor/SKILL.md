@@ -11,11 +11,12 @@ allowed-tools: Read Grep Glob
 
 Assess COBOL programs for modernization readiness. Identify outdated patterns, external dependencies, migration risks, and provide actionable recommendations.
 
+**Before starting, read [knowledge-lookup.md](../_shared/knowledge-lookup.md) for knowledge base access rules and personality guidelines.**
+
 ## Inputs
 
 - Read source files from `input/`
-- Load version file from `src/versions/` if known — dialect-specific features affect migration difficulty
-- Check project context from `src/projects/` for system-level dependencies
+- Follow the knowledge lookup hierarchy in the shared reference above
 
 ## Instructions
 

@@ -11,11 +11,13 @@ allowed-tools: Read Grep Glob
 
 Compare two versions of a COBOL program (or two related programs) and explain the differences.
 
+**Before starting, read [knowledge-lookup.md](../_shared/knowledge-lookup.md) for knowledge base access rules and personality guidelines.**
+
 ## Inputs
 
 - Read source files from `input/` — expects two files (old/new, version A/B, or two related programs)
 - If only one file is provided, ask the user for the second
-- Load project context if the programs belong to a known project
+- Follow the knowledge lookup hierarchy in the shared reference above
 
 ## Instructions
 

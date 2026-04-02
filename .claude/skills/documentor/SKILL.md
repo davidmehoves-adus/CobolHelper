@@ -13,11 +13,13 @@ Transform analysis into clean, shareable documentation files in `output/`.
 
 **This skill is never auto-invoked.** Only trigger when the user explicitly asks for documentation output.
 
+**Before starting, read [knowledge-lookup.md](../_shared/knowledge-lookup.md) for knowledge base access rules and personality guidelines.**
+
 ## Inputs
 
 - Read source files from `input/` if needed for direct analysis
 - Use findings from other skills already returned in the conversation when available — do not re-analyze from scratch
-- Check project context from `src/projects/` if the program belongs to a known project
+- Follow the knowledge lookup hierarchy in the shared reference above
 
 ## Output Location
 

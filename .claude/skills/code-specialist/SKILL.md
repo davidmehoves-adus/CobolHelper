@@ -11,11 +11,12 @@ allowed-tools: Read Grep Glob Bash(wc:*)
 
 Deep technical analysis of COBOL source code. Find bugs, trace logic, identify risky patterns, and explain code mechanics at the implementation level.
 
+**Before starting, read [knowledge-lookup.md](../_shared/knowledge-lookup.md) for knowledge base access rules and personality guidelines.**
+
 ## Inputs
 
 - Read source files from `input/`
-- If the COBOL version is known, read the version file from `src/versions/` for dialect-specific behavior
-- Consult `src/mind_maps/cobol_map.json` for relevant general knowledge when encountering unfamiliar syntax
+- Follow the knowledge lookup hierarchy in the shared reference above
 
 ## Instructions
 

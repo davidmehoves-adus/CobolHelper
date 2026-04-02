@@ -11,11 +11,13 @@ allowed-tools: Read Grep Glob
 
 Translate COBOL technical implementation into purpose, process flow, business rules, and context that non-technical stakeholders can understand.
 
+**Before starting, read [knowledge-lookup.md](../_shared/knowledge-lookup.md) for knowledge base access rules and personality guidelines.**
+
 ## Inputs
 
 - Read source files from `input/`
-- Check `src/mind_maps/project_map.json` — if the program belongs to a known project, load the project file for additional business context
-- If the COBOL version is known, load the version file for dialect awareness
+- Follow the knowledge lookup hierarchy in the shared reference above
+- Check `project_map.json` — if the program belongs to a known project, load the project file for business context
 
 ## Instructions
 

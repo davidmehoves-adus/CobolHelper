@@ -11,11 +11,12 @@ allowed-tools: Read Grep Glob
 
 Given a change target (field, copybook, business rule, paragraph), identify everything that would be affected.
 
+**Before starting, read [knowledge-lookup.md](../_shared/knowledge-lookup.md) for knowledge base access rules and personality guidelines.**
+
 ## Inputs
 
 - Read source files from `input/` — may need multiple files to trace cross-program impact
-- Check project context from `src/projects/` for known program relationships
-- Consult `src/mind_maps/cobol_map.json` if the change involves a pattern with known implications
+- Follow the knowledge lookup hierarchy in the shared reference above
 
 ## Instructions
 
