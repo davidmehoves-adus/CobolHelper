@@ -106,9 +106,10 @@ These skills use `context: fork` — they spawn isolated subagents for focused w
 
 ### Orchestration Rules
 
-1. **Implicit routing only.** Match the user's intent to the right skill(s) — never ask the user to pick one.
-2. **Parallel when possible.** If a request triggers multiple skills (e.g., "explain this program and find any bugs" = business-analyst + code-specialist), spawn them in parallel.
-3. **Wait and combine.** When multiple skills are spawned, wait for all to return and deliver a single combined response — unless the documentor is one of them.
-4. **Documentor exception.** If the documentor is spawned alongside other skills, deliver the chat response from the other skills immediately. Let the documentor run in the background and notify the user when docs are ready in `output/`.
-5. **Documentor reuses context.** When the documentor runs after other skills have already analyzed the code, it should build on their findings rather than re-analyzing from scratch.
-6. **Simple questions don't need forked skills.** If the user asks something Claude can answer directly from knowledge files or a quick code read, just answer — don't over-orchestrate.
+1. **Protect the main context window.** The top-level agent must never read large files (COBOL source, lengthy docs) directly into its own context. Always delegate file reading and analysis to a forked skill. The main agent's job is to route, orchestrate, and combine results — not to do the heavy lifting itself. If a task involves reading or analyzing code, spawn the appropriate skill. No exceptions.
+2. **Implicit routing only.** Match the user's intent to the right skill(s) — never ask the user to pick one.
+3. **Parallel when possible.** If a request triggers multiple skills (e.g., "explain this program and find any bugs" = business-analyst + code-specialist), spawn them in parallel.
+4. **Wait and combine.** When multiple skills are spawned, wait for all to return and deliver a single combined response — unless the documentor is one of them.
+5. **Documentor exception.** If the documentor is spawned alongside other skills, deliver the chat response from the other skills immediately. Let the documentor run in the background and notify the user when docs are ready in `output/`.
+6. **Documentor reuses context.** When the documentor runs after other skills have already analyzed the code, it should build on their findings rather than re-analyzing from scratch.
+7. **Simple questions don't need forked skills.** If the user asks something Claude can answer directly from knowledge files or a quick code read, just answer — don't over-orchestrate. But if the answer requires reading COBOL source files, always fork.
