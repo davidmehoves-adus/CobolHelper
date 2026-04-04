@@ -49,6 +49,7 @@ For diagram conventions, see [diagram-guide.md](references/diagram-guide.md).
 - Each document should stand on its own — don't require reading another doc first
 - Include a generation timestamp and source file reference at the top of each doc
 - Keep individual documents under 40,000 characters — split if needed
+- If a document contains more than one section (## heading), include a **Table of Contents** after the problem statement listing all sections as an ordered list
 
 ## Required Document Structure
 
