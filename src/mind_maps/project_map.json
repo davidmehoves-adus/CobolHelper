@@ -1,8 +1,8 @@
 [
   {
-    "name": "clearinghouse",
-    "location": "src/projects/clearinghouse.md",
-    "description": "Monthly batch enrollment reporting for Minnesota public colleges, transmitted to National Student Clearinghouse (NSC) for NSLDS federal compliance",
-    "key_words": ["FA0300CB", "FA0155CB", "NSC", "NSLDS", "enrollment report", "JAMS", "Oracle SQL", "RHEL"]
+    "name": "LegacyIsrsJobs",
+    "location": "src/projects/LegacyIsrsJobs.md",
+    "description": "Legacy ISRS ERP/SIS batch jobs for Minnesota public colleges — clearinghouse reporting, student records, curriculum, and financial aid",
+    "key_words": ["ISRS", "batch", "JAMS", "Oracle SQL", "RHEL", "NSC", "NSLDS", "clearinghouse", "enrollment report", "student records", "curriculum", "financial aid", "Pell Grant", "loan origination", "loan disbursement", "awards", "FA0300CB", "FA0155CB", "FA0017CP", "FA2641CF", "FA2651CF", "FA2655CF"]
   }
 ]
